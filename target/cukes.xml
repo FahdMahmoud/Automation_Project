@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="18" time="396.031">
+    <testcase classname="guest user could register with valid data successfully" name="user register with valid data" time="16.715">
+        <system-out><![CDATA[Given user Open the browser to register.....................................passed
+And user navigate to Home page..............................................passed
+And user navigate to register page..........................................passed
+When user enter valid data, first name is "Fahd" , last name is "Mahmoud", email is "fahd.tiger2022@gmail.com", company is "FWD", password is "123456" and confirm password is "123456".passed
+And user click on Register Button...........................................passed
+Then user Registration Successfully.........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user should be able to login to the System" name="User login with valid User name and password" time="17.019">
+        <system-out><![CDATA[Given user open the browser.................................................passed
+And user navigate to the login page.........................................passed
+When user enter Valid Data vaild Email is "fahd.tiger2022@gmail.com" , valid Password is "123456".passed
+And user click on login button..............................................passed
+Then user could login successfully..........................................passed
+And user directed to the home page..........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user should be able to login to the System" name="User login with invalid user name , password" time="17.28">
+        <system-out><![CDATA[Given user open the browser.................................................passed
+And user navigate to the login page.........................................passed
+When user enter Invalid Login Data inavlid email is "fahd@gmail.com" , invalid Password is "123456".passed
+And user click on login button..............................................passed
+Then user could Not login successfully......................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="users will be able to search for products with different parameters" name="user could search using product name by click on search button" time="13.207">
+        <system-out><![CDATA[Given user Open the browser to search.......................................passed
+And user navigate to the Home page..........................................passed
+When user write product name in the search Text box in the Home page product name is "Apple".passed
+And user Click on search button.............................................passed
+Then the application directed to the URL Successfully_ProductName...........passed
+And product appeared........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="users will be able to search for products with different parameters" name="user could search using product SKU by hit ENTER from Keyboard" time="14.32">
+        <system-out><![CDATA[Given user Open the browser to search.......................................passed
+And user navigate to the Home page..........................................passed
+When user write product SKU in the search Text box in the Home page Product SKU is "AP_MBP_13".passed
+And user hit Enter from keyboard............................................passed
+Then the application directed to the URL Successfully_SKU...................passed
+And product appeared........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can change Website Currencies between [$, €]" name="switch Currency from $ To €" time="17.353">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+And select €................................................................passed
+Then € currency is selected.................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can change Website Currencies between [$, €]" name="switch Currency from € To $" time="16.241">
+        <system-out><![CDATA[Given user navigate to home page............................................passed
+And select US Dollar........................................................passed
+Then $ currency is selected.................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user could hover categories and select sub category" name="user could hover on categories and select subcategory" time="14.773">
+        <system-out><![CDATA[Given user open browser.....................................................passed
+And user navigate to home page to hover on category.........................passed
+When user hover category and select subcategory.............................passed
+And user select subcategory from main category..............................passed
+Then user select the subcategory successfully...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="users will be able to open sliders in home page" name="first slider ( Nokia Lumia 1020 ) is clickable on home page" time="23.443">
+        <failure message="Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/nokia-lumia-1020&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'FAHD-ELSHAIKH', ip: '10.10.10.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\FAHDEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54078}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54078/devtoo..., se:cdpVersion: 102.0.5005.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 78fbe18a5f04af2363d07bd97ffc38ca" type="org.openqa.selenium.TimeoutException"><![CDATA[Given open browser..........................................................passed
+And navigate to home_page...................................................passed
+When user click on first slider.............................................passed
+Then first slider item page opened successfully.............................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/nokia-lumia-1020". Current url: "https://demo.nopcommerce.com/" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'FAHD-ELSHAIKH', ip: '10.10.10.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\FAHDEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54078}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54078/devtoo..., se:cdpVersion: 102.0.5005.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 78fbe18a5f04af2363d07bd97ffc38ca
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at StepDefinations.ST06_Slider_StepDefination.FirstSliderPageOpened(ST06_Slider_StepDefination.java:67)
+	at ✽.first slider item page opened successfully(file:///C:/Users/FahdElShaikh/IdeaProjects/FWD_Auto_Project_Cucumber/src/main/resources/Features/F06_HomeSliders.feature:17)
+]]></failure>
+    </testcase>
+    <testcase classname="users will be able to open sliders in home page" name="second slider ( iPhone ) is clickable on home page" time="26.029">
+        <failure message="Expected condition failed: waiting for url to contain &quot;https://demo.nopcommerce.com/iphone-6&quot;. Current url: &quot;https://demo.nopcommerce.com/&quot; (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'FAHD-ELSHAIKH', ip: '10.10.10.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\FAHDEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54118}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54118/devtoo..., se:cdpVersion: 102.0.5005.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: bb9b77218ca269070ff3b0a5856dbc0b" type="org.openqa.selenium.TimeoutException"><![CDATA[Given open browser..........................................................passed
+And navigate to home_page...................................................passed
+When user click on second slider............................................passed
+Then second slider item page opened successfully............................failed
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "https://demo.nopcommerce.com/iphone-6". Current url: "https://demo.nopcommerce.com/" (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'FAHD-ELSHAIKH', ip: '10.10.10.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\FAHDEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54118}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54118/devtoo..., se:cdpVersion: 102.0.5005.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bb9b77218ca269070ff3b0a5856dbc0b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at StepDefinations.ST06_Slider_StepDefination.SecondSliderPageOpened(ST06_Slider_StepDefination.java:77)
+	at ✽.second slider item page opened successfully(file:///C:/Users/FahdElShaikh/IdeaProjects/FWD_Auto_Project_Cucumber/src/main/resources/Features/F06_HomeSliders.feature:26)
+]]></failure>
+    </testcase>
+    <testcase classname="Unknown" name="user opens facebook link" time="20.666">
+        <system-out><![CDATA[Given Open The Browser......................................................passed
+And Navigate To HomePage....................................................passed
+When click the facebook link................................................passed
+Then Facebook opened in new tab.............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user opens twitter link" time="15.838">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[2]/a&quot;}&#10;  (Session info: chrome=102.0.5005.61)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'FAHD-ELSHAIKH', ip: '10.10.10.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [1f95540125998f4f91dcac65fdd94f61, findElement {using=xpath, value=/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[2]/a}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\FAHDEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54209}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54209/devtoo..., se:cdpVersion: 102.0.5005.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 1f95540125998f4f91dcac65fdd94f61" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Open The Browser......................................................passed
+And Navigate To HomePage....................................................passed
+When user click on the twitter link.........................................failed
+Then Twitter opened in new tab..............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[2]/a"}
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'FAHD-ELSHAIKH', ip: '10.10.10.198', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1f95540125998f4f91dcac65fdd94f61, findElement {using=xpath, value=/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[2]/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\FAHDEL~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54209}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54209/devtoo..., se:cdpVersion: 102.0.5005.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1f95540125998f4f91dcac65fdd94f61
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at Pages.Home_Page.Twitter_Link(Home_Page.java:87)
+	at StepDefinations.ST07_FollowUs_StepDefination.Click_On_Twitter_Link(ST07_FollowUs_StepDefination.java:52)
+	at ✽.user click on the twitter link(file:///C:/Users/FahdElShaikh/IdeaProjects/FWD_Auto_Project_Cucumber/src/main/resources/Features/F07_FollowUs.feature:21)
+]]></failure>
+    </testcase>
+    <testcase classname="Unknown" name="user opens rss link" time="13.536">
+        <system-out><![CDATA[Given Open The Browser......................................................passed
+And Navigate To HomePage....................................................passed
+When user click on the rss link.............................................passed
+Then Rss opened in new tab..................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Unknown" name="user opens youtube link" time="16.773">
+        <system-out><![CDATA[Given Open The Browser......................................................passed
+And Navigate To HomePage....................................................passed
+When user click on the youtube link.........................................passed
+Then Youtube opened in new tab..............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could add items to wishlist" name="user could add HTC_M8 Mobile to wishlist" time="37.059">
+        <system-out><![CDATA[Given Open Browser..........................................................passed
+And user open CellPhone.....................................................passed
+When Add HTC ONE M8 phone to Wish List......................................passed
+Then Notification success message should be displayed.......................passed
+And Notification success message color is green.............................passed
+And HTC ONE M8 phone should be added to WishList Page.......................passed
+And user add one HTC_M8 phone, the count increased..........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could add items to wishlist" name="user could add HTC_Mini Mobile to wishlist" time="33.191">
+        <system-out><![CDATA[Given Open Browser..........................................................passed
+And user open CellPhone.....................................................passed
+When Add HTC One Mini Blue phone to Wish List...............................passed
+Then Notification success message should be displayed.......................passed
+And Notification success message color is green.............................passed
+And HTC One Mini Blue phone should be added to WishList Page................passed
+And user add one HTC_Mini phone, the count increased........................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could add items to Cart" name="user could add Nokia Lumia 1020 Mobile to Cart" time="45.715">
+        <system-out><![CDATA[Given Open Browser On HomePage..............................................passed
+And user open CellPhone page................................................passed
+When user click on AddToCart button Nokia Lumia 1020 phone..................passed
+Then Notification success message should be displayed when Add success......passed
+And Notification success message color is green when Add success............passed
+And Nokia Lumia 1020 phone should be added to cart Page successfully........passed
+And user add another Nokia Lumia 1020 phone, the count should increased.....passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User could add items to Cart" name="user could add HTC_Mini Mobile to Cart" time="36.066">
+        <system-out><![CDATA[Given Open Browser On HomePage..............................................passed
+And user open CellPhone page................................................passed
+When user click on AddToCart button HTC One Mini Blue phone to Add cart.....passed
+Then Notification success message should be displayed when Add success......passed
+And Notification success message color is green when Add success............passed
+And HTC One Mini Blue phone should be added to Cart successfully............passed
+And user add another HTC Mini phone, the count should increased.............passed
+]]></system-out>
+    </testcase>
+</testsuite>

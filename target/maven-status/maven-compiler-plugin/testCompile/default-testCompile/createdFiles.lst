@@ -1,0 +1,14 @@
+Pages\Home_Page.class
+StepDefinations\ST03_Search_StepDefination.class
+StepDefinations\ST05_HoverOnCategory_StepDefination.class
+StepDefinations\ST08_WishList_StepDefination.class
+StepDefinations\ST01_Register_StepDefination.class
+Pages\CellPhone_Page.class
+StepDefinations\ST04_Change_Currency_StepDefination.class
+StepDefinations\ST02_Login_StepDefination.class
+StepDefinations\ST07_FollowUs_StepDefination.class
+Pages\Register_Page_Elements.class
+StepDefinations\ST06_Slider_StepDefination.class
+StepDefinations\ST09_AddToCart_StepDefination.class
+Runner\Runner.class
+Pages\Login_Page_Elements.class
